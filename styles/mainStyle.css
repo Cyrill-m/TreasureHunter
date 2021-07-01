@@ -1,0 +1,236 @@
+/* 
+    Created on : 11.01.2019, 15:46:28
+    Author     : Kiryl Matusevich
+*/
+
+/*  фоновые картинки главного окна  */
+#pane-top {
+    -fx-background-image: url('/img/bg-top.png');
+}
+#pane-bottom {
+    -fx-background-image: url('/img/bg-bottom.png');
+}
+#pane-left {
+    -fx-background-image: url('/img/bg-left.png');
+}
+#pane-right {
+    -fx-background-image: url('/img/bg-right.png');
+}
+#pane-center {
+    -fx-background-image: url('/img/map.png');
+}
+
+/*  фон игровой карты  */
+#pane-map {
+    -fx-background-image: url('/img/map.png');
+}
+
+/*  фон игрового поля  */
+#pane-game {
+    -fx-background-image: url('/img/map.png');
+}
+
+/*  общий стиль кнопок */
+Button {
+    -fx-text-fill: #ffc000;
+    -fx-background-color: #386934;
+    -fx-background-radius: 12px;
+    -fx-border-color: #bfc0a5;
+    -fx-border-width: 4px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, #000, 10, 0, 1, 1);
+}
+Button:hover {    
+    /*-fx-background-color: #4f9149;*/
+    -fx-border-color: #ffc000;
+    -fx-translate-x: 1;
+    -fx-translate-y: 1;
+}
+Button:pressed {
+    -fx-text-fill: #fff000;
+}
+
+
+.pane-menu {    
+    -fx-background-color: #386934;
+    -fx-background-radius: 12px;
+    -fx-border-color: #bfc0a5;
+    -fx-border-width: 4px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, #000, 10, 0.3, 1, 1);
+}
+.pane-menu Label {
+    -fx-text-fill: #ffc000;
+}
+
+.label-field {
+    -fx-border-color: #bfc0a5;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-padding: 0 0 0 6px;
+}
+
+/*    TextArea property    */
+.text-area {
+    -fx-background-color: #386934;
+    -fx-text-fill: #ffc000;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+}
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+/*  Tiles for map   */
+#tile-m-0 {
+    -fx-background-image: url("../img/tile-m/tile-m-0.png");
+}
+#tile-m-0:hover {
+    -fx-background-image: url("../img/tile-m/tile-m-0h.png");
+}
+#tile-m-1 {
+    -fx-background-image: url("../img/tile-m/tile-m-1.png");
+}
+#tile-m-1:hover {
+    -fx-background-image: url("../img/tile-m/tile-m-1h.png");
+}
+#tile-m-2 {
+    -fx-background-image: url("../img/tile-m/tile-m-2.png");
+}
+#tile-m-2:hover {
+    -fx-background-image: url("../img/tile-m/tile-m-2h.png");
+}
+#tile-m-3 {
+    -fx-background-image: url("../img/tile-m/tile-m-3.png");
+}
+#tile-m-3:hover {
+    -fx-background-image: url("../img/tile-m/tile-m-3h.png");
+}
+#tile-m-4 {
+    -fx-background-image: url("../img/tile-m/tile-m-4.png");
+}
+#tile-m-4:hover {
+    -fx-background-image: url("../img/tile-m/tile-m-4h.png");
+}
+
+
+/*  Tiles for game  */
+/*  GRASS landscape  */
+#tile-g-00 {
+    -fx-background-image: url("../img/tile-g/tile-g-00.png");
+}
+#tile-g-01 {
+    -fx-background-image: url("../img/tile-g/tile-g-01.png");
+}
+#tile-g-02 {
+    -fx-background-image: url("../img/tile-g/tile-g-02.png");
+}
+
+#tile-g-00:hover,
+#tile-g-01:hover,
+#tile-g-02:hover {
+    -fx-border-color: #ffc000;
+    -fx-border-radius: 6px; 
+    -fx-border-width: 2px;
+}
+
+/*  TREE landscape  */
+#tile-g-10 {
+    -fx-background-image: url("../img/tile-g/tile-g-10.png");
+}
+#tile-g-11 {
+    -fx-background-image: url("../img/tile-g/tile-g-11.png");
+}
+#tile-g-12 {
+    -fx-background-image: url("../img/tile-g/tile-g-12.png");
+}
+
+#tile-g-10:hover,
+#tile-g-11:hover,
+#tile-g-12:hover {
+    -fx-border-color: #ffc000;
+    -fx-border-radius: 6px; 
+    -fx-border-width: 2px;
+}
+
+/*  SWAMP landscape  */
+#tile-g-20 {
+    -fx-background-image: url("../img/tile-g/tile-g-20.png");
+}
+#tile-g-21 {
+    -fx-background-image: url("../img/tile-g/tile-g-21.png");
+}
+#tile-g-22 {
+    -fx-background-image: url("../img/tile-g/tile-g-22.png");
+}
+
+#tile-g-20:hover,
+#tile-g-21:hover,
+#tile-g-22:hover {
+    -fx-border-color: #ffc000;
+    -fx-border-radius: 6px; 
+    -fx-border-width: 2px;
+}
+
+/*  MOUNT landscape  */
+#tile-g-30 {
+    -fx-background-image: url("../img/tile-g/tile-g-30.png");
+}
+#tile-g-31 {
+    -fx-background-image: url("../img/tile-g/tile-g-31.png");
+}
+#tile-g-32 {
+    -fx-background-image: url("../img/tile-g/tile-g-32.png");
+}
+
+#tile-g-30:hover,
+#tile-g-31:hover,
+#tile-g-32:hover {
+    -fx-border-color: #ffc000;
+    -fx-border-radius: 6px; 
+    -fx-border-width: 2px;
+}
+
+/*  STATUS digits  */
+#tile-g-d0 {
+    -fx-background-image: url("../img/tile-g/tile-g-d0.png");
+}
+#tile-g-d1 {
+    -fx-background-image: url("../img/tile-g/tile-g-d1.png");
+}
+#tile-g-d2 {
+    -fx-background-image: url("../img/tile-g/tile-g-d2.png");
+}
+#tile-g-d3 {
+    -fx-background-image: url("../img/tile-g/tile-g-d3.png");
+}
+#tile-g-d4 {
+    -fx-background-image: url("../img/tile-g/tile-g-d4.png");
+}
+#tile-g-d5 {
+    -fx-background-image: url("../img/tile-g/tile-g-d5.png");
+}
+#tile-g-d6 {
+    -fx-background-image: url("../img/tile-g/tile-g-d6.png");
+}
+#tile-g-d7 {
+    -fx-background-image: url("../img/tile-g/tile-g-d7.png");
+}
+#tile-g-d8 {
+    -fx-background-image: url("../img/tile-g/tile-g-d8.png");
+}
+#tile-g-d9 {
+    -fx-background-image: url("../img/tile-g/tile-g-d9.png");
+}
+
+.tile-g-d:hover {
+    -fx-border-color: #ffc000;
+    -fx-border-radius: 6px; 
+    -fx-border-width: 2px;
+}
