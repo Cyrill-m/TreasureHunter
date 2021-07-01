@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" stylesheets="@../styles/mainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="treasurehunter.MainFXMLController">
+   <top>
+      <Pane id="pane-top" prefHeight="24.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <Pane id="pane-bottom" prefHeight="24.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <Pane id="pane-left" prefHeight="432.0" prefWidth="184.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="paneLeftMenu" layoutX="17.0" layoutY="60.0" prefHeight="150.0" prefWidth="150.0" styleClass="pane-menu" translateX="-180.0">
+               <children>
+                  <Button fx:id="btnBack" graphicTextGap="10.0" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnBackAction" prefHeight="40.0" prefWidth="110.0" text="BACK">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/back.png" />
+                           </image>
+                           <effect>
+                              <DropShadow height="11.0" offsetX="1.0" offsetY="1.0" radius="5.0" width="11.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator blendMode="COLOR_BURN" layoutX="10.0" layoutY="65.0" prefHeight="1.0" prefWidth="130.0" />
+                  <ImageView fitHeight="11.0" fitWidth="6.0" layoutX="20.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/dollar.gif" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbMoney" layoutX="42.0" layoutY="80.0" prefHeight="19.0" prefWidth="90.0" styleClass="label-field" text="100">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Pane fx:id="paneChest" layoutX="13.0" layoutY="110.0">
+                     <children>
+                        <Label fx:id="lbChest" layoutX="29.0" prefHeight="19.0" prefWidth="60.0" styleClass="label-field" text="10/0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="17.0" fitWidth="20.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/chest.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="20.0" layoutX="99.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/chest-open.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children></Pane>
+         </children></Pane>
+   </left>
+   <right>
+      <Pane id="pane-right" fx:id="paneRight" prefHeight="432.0" prefWidth="184.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="paneRightMenu" layoutX="17.0" prefHeight="300.0" prefWidth="150.0" styleClass="pane-menu" translateX="180.0">
+               <children>
+                  <Label fx:id="lbInfo" text="Mining plot status:">
+                     <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Courier New Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Line fx:id="lineMenu" endX="140.0" endY="30.0" fill="#ffc000" startX="10.0" startY="30.0" stroke="#ffc000" strokeWidth="2.0" />
+                  <TextArea fx:id="tarInfo" editable="false" layoutX="5.0" layoutY="40.0" prefHeight="160.0" prefWidth="140.0" promptText="Select mining plot">
+                     <font>
+                        <Font name="Courier New" size="11.0" />
+                     </font>
+                  </TextArea>
+                  <Pane fx:id="paneButtons" layoutX="4.0" layoutY="224.0" visible="false">
+                     <children>
+                        <Button fx:id="btnOk" layoutX="8.0" layoutY="24.0" mnemonicParsing="false" onAction="#btnOkAction" prefHeight="40.0" prefWidth="60.0">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/check-ok.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnCancel" layoutX="74.0" layoutY="24.0" mnemonicParsing="false" onAction="#btnCancelAction" prefHeight="40.0" prefWidth="60.0">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/check-no.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="lbMessage" layoutX="11.0" prefHeight="17.0" prefWidth="120.0" text="Buy and research">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children></Pane>
+   </right>
+   <center>
+      <StackPane fx:id="paneStack" scaleShape="false">
+         <children>
+            <Pane id="pane-center" fx:id="paneStart" prefHeight="432.0" prefWidth="432.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnGame" layoutX="121.0" layoutY="60.0" mnemonicParsing="false" onAction="#btnGameAction" prefHeight="50.0" prefWidth="190.0" text="START GAME">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="121.0" layoutY="125.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="190.0" text="CONTINUE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="121.0" layoutY="190.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="190.0" text="OPTIONS">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnExit" layoutX="121.0" layoutY="255.0" mnemonicParsing="false" onAction="#btnExitAction" prefHeight="50.0" prefWidth="190.0" text="EXIT">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane id="pane-map" fx:id="paneMap" prefHeight="432.0" prefWidth="432.0" translateY="-432.0" />
+            <Pane id="pane-game" fx:id="paneGame" prefHeight="432.0" prefWidth="432.0" scaleShape="false" translateX="432.0" />
+            <Pane fx:id="paneGameEx" onMouseClicked="#paneGameExClicked" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Pane fx:id="paneMsg" layoutX="32.0" layoutY="100.0" prefHeight="100.0" prefWidth="368.0" styleClass="pane-menu" visible="false">
+                     <children>
+                        <Label fx:id="lbMsg" layoutX="20.0" layoutY="20.0" text="You do not have enough money to buy a plot">
+                           <font>
+                              <Font name="Courier New Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnMsgOk" layoutX="295.0" layoutY="50.0" mnemonicParsing="false" onAction="#btnMsgOkAction" prefHeight="40.0" prefWidth="60.0">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/check-ok.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnMsgCancel" layoutX="220.0" layoutY="50.0" mnemonicParsing="false" onAction="#btnMsgCancelAction" prefHeight="40.0" prefWidth="60.0" visible="false">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/check-no.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children></Pane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
